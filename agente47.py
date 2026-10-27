@@ -22,7 +22,7 @@ print(f"O agente buscado é o {agent.name}")
 openai_client = project_client.get_openai_client()
 
 resposta = openai_client.responses.create(
-  input=[{"role": "user", "content": "Me fale, vc é um agente que serve para o que exatamente?"}],
+  input=[{"role": "user", "content": "Me fale qual é a sua finalidade."}],
   extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
 )
 
